@@ -312,18 +312,18 @@
           (M = 0), (O = 0);
         });
       let G = 0;
-      l.addEventListener("wheel", e => {
-        G < 4 && z(),
-          2 == G &&
-            (setTimeout(function() {
-              G < 10 && (G = 0);
-            }, 500),
-            setTimeout(function() {
-              G = 0;
-            }, 2e3)),
-          (G += 1);
-      }),
-        l.addEventListener("contextmenu", e => e.preventDefault()),
+      // l.addEventListener("wheel", e => {
+      //   G < 4 && z(),
+      //     2 == G &&
+      //       (setTimeout(function() {
+      //         G < 10 && (G = 0);
+      //       }, 500),
+      //       setTimeout(function() {
+      //         G = 0;
+      //       }, 2e3)),
+      //     (G += 1);
+      // }),
+      l.addEventListener("contextmenu", e => e.preventDefault()),
         l.addEventListener("webglcontextlost", () =>
           alert("WebGL context lost!")
         );

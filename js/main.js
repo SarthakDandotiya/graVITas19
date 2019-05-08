@@ -14,7 +14,7 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 };
 
-//BEGIN
+//SCROLL
 $(document).ready(function() {
   $("a.scroll").click(function(event) {
     event.preventDefault();
