@@ -108,9 +108,9 @@
           twgl.createProgramInfo(c, [vPhysicsParticles, fPhysicsParticles(e)])
         ),
         v = twgl.createProgramInfo(c, [vDrawParticles, fDrawParticles]);
-      // twgl.resizeCanvasToDisplaySize(c.canvas),
-      //   c.viewport(0, 0, c.canvas.clientWidth / 2, c.canvas.clientHeight / 2),
-      //   twgl.setDefaults({ textureColor: [1, 1, 1, 0] });
+      twgl.resizeCanvasToDisplaySize(c.canvas),
+        c.viewport(0, 0, c.canvas.clientWidth / 2, c.canvas.clientHeight / 2),
+        twgl.setDefaults({ textureColor: [1, 1, 1, 0] });
 
       let w = [0, 1, 2].map(e =>
           twgl.createTexture(c, {
@@ -122,8 +122,6 @@
         ),
         h = 200,
         p = 512;
-      console.log(w);
-      console.log("skdjnskjn");
       c.canvas.clientHeight < c.canvas.clientWidth
         ? ((p = 768),
           (h = 300),
