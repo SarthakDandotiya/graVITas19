@@ -16,7 +16,7 @@ window.onscroll = function() {
 
 // GALLERY
 $('.img-slide').slick({
-	lazyLoad: 'progressive',
+	// lazyLoad: 'progressive',
 	autoplay: true,
 	autoplaySpeed: 2000,
 	slidesToShow: 3,
