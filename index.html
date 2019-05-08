@@ -27,9 +27,11 @@
     <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="icon" href="./img/landing/icon.png" />
 
-    <!-- =====================LANDING PAGE CSS============================================== -->
+    <!-- =====================LANDING SECTION CSS============================================== -->
     <link rel="stylesheet" media="screen" href="css/style1.css" />
     <link rel="stylesheet" href="css/main1.css" />
+    <!-- ======================EVENTS SECTION======================================================== -->
+    <link rel="stylesheet" href="css/common.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -142,13 +144,85 @@
               sunt in culpa qui officia deserunt mollit anim id est laborum.
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
               nesciunt, qui labore consectetur placeat saepe distinctio
-              inventore non consequuntur soluta?Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Qui error laborum ducimus voluptatem
-              recusandae, ut quibusdam libero nesciunt iure nisi?
+              inventore non consequuntur soluta?
             </p>
             <a href="#" class="cta">ALL EVENTS</a>
           </div>
-          <div class="col l6 s12"></div>
+          <div class="col l6 s12">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div class="wrap">
+              <div id="showcase" class="noselect">
+                <div class="card">
+                  <div>&nbsp;</div>
+                  <div class="logo">
+                    &nbsp;&nbsp;<img
+                      src="img/event_categories/premium-badge.png"
+                    />
+                  </div>
+                  <div>&nbsp;</div>
+                  <div class="btn">Premium</div>
+                </div>
+
+                <div class="card">
+                  <div>&nbsp;</div>
+                  <div class="logo">
+                    <img src="img/event_categories/training.png" />
+                  </div>
+                  <div>&nbsp;</div>
+                  <div class="btn">Workshops</div>
+                </div>
+
+                <div class="card">
+                  <div>&nbsp;</div>
+                  <div class="logo">
+                    <img src="img/event_categories/web-settings.png" />
+                  </div>
+                  <div>&nbsp;</div>
+                  <div class="btn">Technical</div>
+                </div>
+
+                <div class="card">
+                  <div>&nbsp;</div>
+                  <div class="logo">
+                    <img src="img/event_categories/premium-badge.png" />
+                  </div>
+
+                  <div>&nbsp;</div>
+                  <div class="btn">Premium</div>
+                </div>
+
+                <div class="card">
+                  <div>&nbsp;</div>
+                  <div class="logo">
+                    <img src="img/event_categories/training.png" />
+                  </div>
+
+                  <div>&nbsp;</div>
+                  <div class="btn">Workshops</div>
+                </div>
+
+                <div class="card">
+                  <div>&nbsp;</div>
+                  <div class="logo">
+                    <img src="img/event_categories/web-settings.png" />
+                  </div>
+
+                  <div>&nbsp;</div>
+                  <div class="btn">Technical</div>
+                </div>
+              </div>
+              <div class="navbtncontainer center">
+                <button class="navbutton noselect left">&lt;</button>
+                &nbsp;
+                <button class="navbutton noselect right">&gt;</button>
+              </div>
+              <div>&nbsp;</div>
+
+              <div>&nbsp;</div>
+            </div>
+            <!-- end of wrap -->
+          </div>
         </div>
       </section>
 
@@ -221,7 +295,7 @@
     <script src="./js/materialize.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/main.js"></script>
-    <!-- =============================LANDING PAGE SCRIPTS ================================== -->
+    <!-- =============================LANDING SECTION SCRIPTS ================================== -->
     <script src="js/twgl.min.js"></script>
     <script src="js/shadersLogo.js"></script>
     <script src="js/shadersStars.js"></script>
@@ -229,5 +303,57 @@
     <script src="js/particles.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/index.js"></script>
+    <!-- ===============================EVENTS SECTION SCRIPTS================================== -->
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.cloud9carousel.js"></script>
+    <script src="js/modernizr.min.js"></script>
+    <script>
+      $(function() {
+        var showcase = $("#showcase");
+        var container = $(".conntainer");
+        var abc = 100;
+
+        showcase.Cloud9Carousel({
+          yOrigin: null,
+          yRadius: 40,
+          xRadius: abc == 0 ? null : abc,
+          itemClass: "card",
+          buttonLeft: $(".navbutton.left"),
+          buttonRight: $(".navbutton.right"),
+          btn: $(".btn"),
+          bringToFront: true,
+          onLoaded: function() {
+            showcase.css("visibility", "visible");
+            showcase.css("display", "none");
+            showcase.fadeIn(1500);
+          }
+        });
+
+        // Simulate physical button click effect
+        //
+        $(".navbutton").click(function(e) {
+          var b = $(e.target).addClass("down");
+          setTimeout(function() {
+            b.removeClass("down");
+          }, 80);
+        });
+
+        $(document).keydown(function(e) {
+          //
+          // More codes: http://www.javascripter.net/faq/keycodes.htm
+          //
+          switch (e.keyCode) {
+            /* left arrow */
+            case 37:
+              $(".navbutton.left").click();
+              break;
+
+            /* right arrow */
+            case 39:
+              $(".navbutton.right").click();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
