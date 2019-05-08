@@ -1,0 +1,17 @@
+/* -----FOOTER---------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 750px) {
+	#footer {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#footer p {
+		order: 2;
+	}
+
+	.socials {
+		order: 1;
+		margin-bottom: 2em;
+	}
+}
