@@ -1,133 +1,139 @@
 body {
-  margin: auto;
+	margin: auto;
 }
 
 .landing {
-  background-color: #333;
+	background-color: #333;
 }
 #canvasgl {
-  color: white;
-  position: absolute;
-  height: 25% !important;
-  width: 90% !important;
-  margin-left: 5% !important;
-  overflow-x: scroll;
-  top: 44%;
-  -ms-transform: translateY(-60%);
-  transform: translateY(-60%);
+	color: white;
+	position: absolute;
+	height: 25% !important;
+	width: 90% !important;
+	margin-left: 5% !important;
+	overflow-x: scroll;
+	top: 44%;
+	-ms-transform: translateY(-60%);
+	transform: translateY(-60%);
 }
 .info {
-  user-select: none; /* supported by Chrome and Opera */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  color: #fff;
-  position: absolute;
-  text-align: center;
-  bottom: 29%;
-  left: 50%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
-  text-transform: uppercase;
-  opacity: 0;
-  font-family: "Montserrat";
-  -webkit-animation-name: show;
-  animation-name: show;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.85s;
-  animation-delay: 0.85s;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+	user-select: none; /* supported by Chrome and Opera */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	color: #fff;
+	position: absolute;
+	text-align: center;
+	bottom: 29%;
+	left: 50%;
+	margin-right: -50%;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+	text-transform: uppercase;
+	opacity: 0;
+	font-family: 'Montserrat';
+	-webkit-animation-name: show;
+	animation-name: show;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-delay: 0.85s;
+	animation-delay: 0.85s;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
 }
 .info h2 {
-  font-size: 22px !important;
+	font-size: 22px !important;
 }
 .info p {
-  font-size: 20px;
+	font-size: 20px;
 }
 @media screen and (max-width: 415px) {
-  .info {
-    bottom: 34.5% !important;
-  }
+	.info {
+		bottom: 34.5% !important;
+	}
 }
 @media screen and (max-width: 376px) {
-  .info {
-    bottom: 34.5% !important;
-  }
-  .info h2 {
-    font-size: 14px !important;
-  }
+	.info {
+		bottom: 34.5% !important;
+	}
+	.info h2 {
+		font-size: 14px !important;
+	}
 }
 @media screen and (max-width: 800px) {
-  .info {
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-    bottom: 31%;
-  }
-  .info h2 {
-    font-size: 18px;
-  }
-  .info p {
-    font-size: 13px;
-  }
+	.info {
+		-webkit-animation-delay: 0s;
+		animation-delay: 0s;
+		bottom: 31%;
+	}
+	.info h2 {
+		font-size: 18px;
+	}
+	.info p {
+		font-size: 13px;
+	}
 }
 @-webkit-keyframes show {
-  0% {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 @keyframes show {
-  0% {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 .mybtn {
-  border-radius: 2px;
-  border: none;
-  color: black;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  transition: 0.5s ease;
-  background-color: #0cd1eb;
+	/* border-radius: 2px; */
+	border: none;
+	color: black;
+	padding: 7px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	transition: 0.5s ease;
+	box-shadow: none;
+	background-color: #0cd1eb;
 }
 .mybtn:hover {
-  background-color: #222222;
-  color: #0cd1eb;
+	background-color: #333;
+	color: #0cd1eb;
+	box-shadow: none;
+	/* transition: 0.3s; */
+}
+.mybtn:active {
+	background-color: black;
 }
 @media screen and (max-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
-  }
-  html {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+	::-webkit-scrollbar {
+		width: 0;
+		background: transparent;
+	}
+	html {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
 }
 .info h2 {
-  padding: 0;
-  margin: 0;
-  font-family: "Montserrat";
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat';
+	font-size: 24px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 ul li {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 /* ===================================================================== */
