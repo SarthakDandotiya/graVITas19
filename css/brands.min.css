@@ -7,7 +7,7 @@
 	font-style: normal;
 	font-weight: normal;
 	font-display: auto;
-	src: url(../webfonts/fa-brands-400.ttf) format('truetype');
+	src: url('./fa-brands-400.ttf') format('truetype');
 }
 .fab {
 	font-family: 'Font Awesome 5 Brands';
