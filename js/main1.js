@@ -202,7 +202,7 @@
         }
         if (c.canvas.clientWidth <= 420) {
           h1 = 0.4;
-          h = 0.9;
+          h = 0.87;
         } else if (c.canvas.clientWidth <= 720) {
           h1 = 0.45;
           h = 0.55;
