@@ -108,6 +108,10 @@ body {
   background-color: #222222;
   color: #0cd1eb;
 }
+.mybtn:after {
+  background-color: #0cd1eb !important;
+  color: black !important;
+}
 @media screen and (max-width: 768px) {
   ::-webkit-scrollbar {
     width: 0;

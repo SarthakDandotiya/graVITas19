@@ -41,6 +41,10 @@ a {
 }
 .btn:hover {
   background-color: #333;
+  color: #0cd1eb !important;
+}
+.btn:after {
+  background-color: #333;
   color: white !important;
 }
 
