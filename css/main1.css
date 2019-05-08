@@ -43,7 +43,7 @@ body {
   animation-duration: 0.5s;
 }
 .info h2 {
-  font-size: 19px;
+  font-size: 22px !important;
 }
 .info p {
   font-size: 20px;
