@@ -124,6 +124,7 @@ nav,
 /* -----LANDING-----------------------------------------------------------------------------*/
 
 #landing {
+	/* display: none; */
 	height: 100vh;
 	margin: 0;
 	padding: 0;
@@ -218,7 +219,7 @@ nav,
 	margin: 3em 0;
 }
 
-#footer p {
+.dev-text {
 	color: #555;
 	margin: 1em 0;
 }
@@ -228,7 +229,7 @@ nav,
 }
 
 .socials a {
-	font-size: 32px;
+	font-size: 24px;
 	color: white !important;
 	margin: 0 10px;
 }

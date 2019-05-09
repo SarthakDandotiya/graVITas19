@@ -313,10 +313,14 @@
 					class="vit-logo"
 				/>
 
-				<p>
-					Developed with <i class="fab fa-gratipay"></i> by Indresh
-					Arora & Team
-				</p>
+				<div class="contact">
+					<i class="fas fa-map-marker-alt"></i>
+					<i class="fas fa-location-arrow"></i>
+					<p class="dev-text">
+						Developed with <i class="fab fa-gratipay"></i> by
+						Indresh Arora & Team
+					</p>
+				</div>
 
 				<div class="socials">
 					<a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -351,6 +355,10 @@
 				var abc = 100;
 
 				showcase.Cloud9Carousel({
+					autoPlay: 1,
+					autoPlayDelay: 3000,
+					smooth: true,
+					speed: 4,
 					yOrigin: null,
 					yRadius: -40,
 					xRadius: abc == 0 ? null : abc,
