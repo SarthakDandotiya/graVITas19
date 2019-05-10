@@ -33,6 +33,7 @@ $('.img-slide').slick({
 	autoplay: true,
 	autoplaySpeed: 2000,
 	slidesToShow: sts,
+	// variableWidth: true,
 	arrows: false,
 	infinte: true,
 	swipeToSlide: true
