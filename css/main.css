@@ -1,23 +1,23 @@
 /* -----GLOBALS-------------------------------------------------------------------------------------*/
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
-	font-family: 'Custom';
-	src: url('./Custom.otf') format('opentype');
+  font-family: "Custom";
+  src: url("./Custom.otf") format("opentype");
 }
 
 body {
-	width: 100%;
-	background: #ffffff;
-	color: black;
-	font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  background: #ffffff;
+  color: black;
+  font-family: "Open Sans", sans-serif;
 }
 
 body::-webkit-scrollbar {
-	width: 0 !important;
+  width: 0 !important;
 }
 
 h1,
@@ -26,214 +26,214 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Custom' !important;
+  font-family: "Custom" !important;
 }
 
 h4 {
-	margin: 0 0 16px 0;
-	font-size: 32px;
-	letter-spacing: 1px;
-	line-height: 32px;
-	padding-left: 15px;
-	border-left: 5px solid #0cd1eb;
+  margin: 0 0 16px 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+  line-height: 32px;
+  padding-left: 15px;
+  border-left: 5px solid #0cd1eb;
 }
 
 p {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.2em;
-	text-align: justify;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  text-align: justify;
 }
 
 section {
-	padding: 5em 0;
-	overflow: hidden;
+  padding: 5em 0;
+  overflow: hidden;
 }
 
 .cta {
-	line-height: 5em;
-	letter-spacing: 1px;
-	background-color: #0cd1eb;
-	color: black;
-	font-family: 'Custom';
-	/* margin: 16px; */
-	padding: 1em;
+  line-height: 5em;
+  letter-spacing: 1px;
+  background-color: #0cd1eb;
+  color: black;
+  font-family: "Custom";
+  /* margin: 16px; */
+  padding: 1em;
 }
 
 .cta:hover {
-	background-color: #333;
-	color: #0cd1eb;
-	transition: 0.4s;
+  background-color: #333;
+  color: #0cd1eb;
+  transition: 0.4s;
 }
 
 .cta:active {
-	background-color: black;
+  background-color: black;
 }
 
 /* -----NAVBAR-------------------------------------------------------------------------------------*/
 
 nav,
 .nav-wrapper {
-	font-family: 'Custom';
-	letter-spacing: 2px;
-	background: #222222;
-	box-shadow: none;
-	/* height: 5em; */
+  font-family: "Custom";
+  letter-spacing: 2px;
+  background: #222222;
+  box-shadow: none;
+  /* height: 5em; */
 }
 
 #navbar {
-	position: fixed;
-	z-index: 100;
-	transition: 0.5s;
-	transition-delay: 0.2s;
-	padding-bottom: 0;
+  position: fixed;
+  z-index: 100;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+  padding-bottom: 0;
 }
 
 .nav-logo {
-	margin: 6% 5%;
-	height: 40px;
+  margin: 6% 5%;
+  height: 40px;
 }
 
 .underline li a {
-	position: relative;
-	text-decoration: none;
+  position: relative;
+  text-decoration: none;
 }
 
 .underline li a:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0%;
-	border-bottom: 3px solid #0cd1eb;
-	transition: 0.4s;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 3px solid #0cd1eb;
+  transition: 0.4s;
 }
 .underline li a:hover:after {
-	width: 100%;
+  width: 100%;
 }
 
 .sidenav {
-	background-color: #555;
-	padding-top: 2em;
+  background-color: #555;
+  padding-top: 2em;
 }
 
 .sidenav li > a {
-	color: white;
-	font-family: 'Custom';
+  color: white;
+  font-family: "Custom";
 }
 
 /* -----LANDING-----------------------------------------------------------------------------*/
 
 #landing {
-	height: 100vh;
-	margin: 0;
-	padding: 0;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 /* -----ABOUT-----------------------------------------------------------------------------*/
 
 #about {
-	background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 #about .row {
-	padding: 2em 8% 0 8%;
+  padding: 2em 8% 0 8%;
 }
 
 #about p {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .about-img {
-	width: 100%;
-	/* padding: 0 10% 0 0; */
+  width: 100%;
+  /* padding: 0 10% 0 0; */
 }
 
 /* -----EVENTS-----------------------------------------------------------------------------*/
 
 #events {
-	background-color: #222;
+  background-color: #222;
 }
 #events .row {
-	padding: 2em 8% 0 8%;
+  padding: 2em 8% 0 8%;
 }
 
 #events p {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 #events h4 {
-	color: white;
-	margin: 0 0 16px 0;
-	font-size: 32px;
-	letter-spacing: 1px;
-	line-height: 32px;
-	padding-left: 15px;
-	border-left: 5px solid #0cd1eb;
+  color: white;
+  margin: 0 0 16px 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+  line-height: 32px;
+  padding-left: 15px;
+  border-left: 5px solid #0cd1eb;
 }
 
 #events p {
-	color: white;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.2em;
-	text-align: justify;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  text-align: justify;
 }
 /* -----GALLERY---------------------------------------------------------------------------*/
 
 #gallery {
-	padding: 0;
-	/* padding-bottom: 7%; */
-	background-color: #f0f0f0;
+  padding: 0;
+  /* padding-bottom: 7%; */
+  background-color: #f0f0f0;
 }
 
 /* -----TEAM & SPONSOR------------------------------------------------------------*/
 
 #tns {
-	background: #f0f0f0;
+  background: #f0f0f0;
 }
 
 #tns .row div {
-	padding: 1% 8%;
-	margin-bottom: 5%;
+  padding: 1% 8%;
+  margin-bottom: 5%;
 }
 
 .banner {
-	width: 100%;
-	margin: 0;
-	padding: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* -----FOOTER---------------------------------------------------------------------------*/
 
 #footer {
-	margin-top: -1.25%;
-	background-color: #333;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 5%;
+  margin-top: -1.25%;
+  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
 }
 
 .vit-logo {
-	height: 5em;
-	margin: 3em 0;
+  height: 5em;
+  margin: 3em 0;
 }
 
 #footer p {
-	color: #555;
-	margin: 1em 0;
+  color: #555;
+  margin: 1em 0;
 }
 
 .socials {
-	margin: 1em 0;
+  margin: 1em 0;
 }
 
 .socials a {
-	font-size: 32px;
-	color: white !important;
-	margin: 0 10px;
+  font-size: 32px;
+  color: white !important;
+  margin: 0 10px;
 }
 
 .socials a i:hover {
-	color: #0cd1eb;
-	transition: 0.5s;
+  color: #0cd1eb;
+  transition: 0.5s;
 }
