@@ -27,6 +27,7 @@ app.controller("eventCtrl", function($scope, $http) {
         }
       }
     });
+
     if (localStorage.getItem("storageName") == "all") $("button.all").click();
     else if (localStorage.getItem("storageName") == "premium")
       $("button.premium").click();

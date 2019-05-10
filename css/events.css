@@ -84,7 +84,17 @@ section {
 }
 
 /* -----NAVBAR-------------------------------------------------------------------------------------*/
-
+#input {
+  width: 50% !important;
+  color: white !important;
+  margin-left: 25% !important;
+}
+@media (max-width: 450px) {
+  #input {
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+}
 nav,
 .nav-wrapper {
   font-family: "Custom";
@@ -186,6 +196,9 @@ nav,
   .event_card {
     height: inherit !important;
   }
+}
+.allevents {
+  padding-top: 10px !important;
 }
 
 /* -------FLIPPING BOX----------------------------------------------------------------------------------- */
