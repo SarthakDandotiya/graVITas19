@@ -23,7 +23,7 @@ app.controller("eventCtrl", function($scope, $http) {
       callbacks: {
         onMixEnd: function(state) {
           // console.log("sdjbksdjnfskfjjslfkjlkf");
-          console.log(state);
+          // console.log(state);
         }
       }
     });
