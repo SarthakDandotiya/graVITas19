@@ -1,7 +1,6 @@
 // NAVBAR
 $(document).ready(function() {
   $(".sidenav").sidenav();
-  $(".dropdown-trigger").dropdown();
 });
 
 var prevScrollpos = window.pageYOffset;
@@ -27,12 +26,14 @@ $(document).ready(function() {
 });
 
 // GALLERY
+let sts = window.innerWidth < 650 ? (window.innerWidth < 450 ? 1 : 2) : 3;
 console.log(window.innerWidth);
 $(".img-slide").slick({
   lazyLoad: "progressive",
   autoplay: true,
   autoplaySpeed: 2000,
-  slidesToShow: window.innerWidth < 650 ? (window.innerWidth < 450 ? 1 : 2) : 3,
+  slidesToShow: sts,
+  // variableWidth: true,
   arrows: false,
   infinte: true,
   swipeToSlide: true
