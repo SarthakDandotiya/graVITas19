@@ -184,6 +184,7 @@
       var sin = Math.sin(rotation);
       var farScale = this.farScale;
       var scale = farScale + (1 - farScale) * (sin + 1) * 0.5;
+
       item.moveTo(
         this.xOrigin +
           scale * (Math.cos(rotation) * this.xRadius - item.fullWidth * 0.5),
@@ -199,6 +200,7 @@
       var spacing = (2 * Math.PI) / count;
       var radians = this.rotation;
       var nearest = this.nearestIndex();
+
       for (var i = 0; i < count; i++) {
         var item = this.renderItem(i, radians);
         if (i === nearest) {
@@ -208,7 +210,6 @@
               filter: "blur(0px)",
               opacity: 1
             });
-          $(item.element).addClass("sel");
           $(item.element).addClass(this.frontItemClass);
         } else {
           window.innerWidth <= 1500 &&
@@ -217,7 +218,7 @@
               filter: "blur(2px)",
               opacity: 1
             });
-          $(item.element).removeClass("sel");
+
           $(item.element).removeClass(this.frontItemClass);
         }
 
@@ -266,6 +267,7 @@
     this.floatIndex = function() {
       var count = this.items.length;
       var floatIndex = this.itemsRotated() % count;
+
       // Make sure float-index is positive
       return floatIndex < 0 ? floatIndex + count : floatIndex;
     };
@@ -294,99 +296,17 @@
     //
     this.go = function(count) {
       this.destRotation += ((2 * Math.PI) / this.items.length) * count;
-
       this.play();
     };
-    var prev = 0;
+
     this.goTo = function(index) {
       var count = this.items.length;
-      // console.log("unique");
+
       // Find the shortest way to rotate item to front
       var diff = index - (this.floatIndex() % count);
-      if (2 * Math.abs(diff) > count) diff -= diff > 0 ? count : -count;
-      // console.log(prev);
-      // console.log(index);
 
-      if (prev != index) {
-        // console.log("inside");
-        prev = index;
-        if (diff > 0) {
-          if (
-            $(".sel")
-              .text()
-              .trim() == "All"
-          )
-            $("button.premium").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Premium"
-          )
-            $("button.workshops").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Workshops"
-          )
-            $("button.technical").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Technical"
-          )
-            $("button.non-technical").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Non-Technical"
-          )
-            $("button.megathon").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Megathon"
-          )
-            $("button.all").click();
-        } else {
-          if (
-            $(".sel")
-              .text()
-              .trim() == "All"
-          )
-            $("button.megathon").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Megathon"
-          )
-            $("button.non-technical").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Non-Technical"
-          )
-            $("button.technical").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Technical"
-          )
-            $("button.workshops").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Workshops"
-          )
-            $("button.premium").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Premium"
-          )
-            $("button.all").click();
-        }
-      }
-      prev = index;
+      if (2 * Math.abs(diff) > count) diff -= diff > 0 ? count : -count;
+
       // Halt any rotation already in progress
       this.destRotation = this.rotation;
 
@@ -429,42 +349,6 @@
       if (options.buttonLeft) {
         options.buttonLeft.bind("click", function() {
           self.go(-1);
-          if (
-            $(".sel")
-              .text()
-              .trim() == "All"
-          )
-            $("button.premium").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Premium"
-          )
-            $("button.workshops").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Workshops"
-          )
-            $("button.technical").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Technical"
-          )
-            $("button.non-technical").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Non-Technical"
-          )
-            $("button.megathon").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Megathon"
-          )
-            $("button.all").click();
           return false;
         });
       }
@@ -472,42 +356,6 @@
       if (options.buttonRight) {
         options.buttonRight.bind("click", function() {
           self.go(1);
-          if (
-            $(".sel")
-              .text()
-              .trim() == "All"
-          )
-            $("button.megathon").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Megathon"
-          )
-            $("button.non-technical").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Non-Technical"
-          )
-            $("button.technical").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Technical"
-          )
-            $("button.workshops").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Workshops"
-          )
-            $("button.premium").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Premium"
-          )
-            $("button.all").click();
           return false;
         });
       }
@@ -522,81 +370,6 @@
       if (options.mouseWheel) {
         $container.bind("mousewheel.cloud9", function(event, delta) {
           self.go(delta > 0 ? 1 : -1);
-          if (delta > 0) {
-            if (
-              $(".sel")
-                .text()
-                .trim() == "All"
-            )
-              $("button.megathon").click();
-            if (
-              $(".sel")
-                .text()
-                .trim() == "Megathon"
-            )
-              $("button.non-technical").click();
-            if (
-              $(".sel")
-                .text()
-                .trim() == "Non-Technical"
-            )
-              $("button.technical").click();
-            if (
-              $(".sel")
-                .text()
-                .trim() == "Technical"
-            )
-              $("button.workshops").click();
-            if (
-              $(".sel")
-                .text()
-                .trim() == "Workshops"
-            )
-              $("button.premium").click();
-            if (
-              $(".sel")
-                .text()
-                .trim() == "Premium"
-            )
-              $("button.all").click();
-          } else {
-            if (
-              $(".sel")
-                .text()
-                .trim() == "All"
-            )
-              $("button.premium").click();
-            if (
-              $(".sel")
-                .text()
-                .trim() == "Premium"
-            )
-              $("button.workshops").click();
-            if (
-              $(".sel")
-                .text()
-                .trim() == "Workshops"
-            )
-              $("button.technical").click();
-            if (
-              $(".sel")
-                .text()
-                .trim() == "Technical"
-            )
-              $("button.non-technical").click();
-            if (
-              $(".sel")
-                .text()
-                .trim() == "Non-Technical"
-            )
-              $("button.megathon").click();
-            if (
-              $(".sel")
-                .text()
-                .trim() == "Megathon"
-            )
-              $("button.all").click();
-          }
           return false;
         });
       }

@@ -219,6 +219,10 @@ nav,
 	margin: 3em 0;
 }
 
+#footer p {
+	color: #555;
+	margin: 1em 0;
+}
 .dev-text {
 	color: #555;
 	margin: 1em 0;
@@ -256,6 +260,9 @@ h2 {
 	border-left: 10px solid #0cd1eb;
 	display: inline-block;
 	/* text-justify: left; */
+}
+.info h2 {
+	border-left: 0 !important;
 }
 
 h4 {
