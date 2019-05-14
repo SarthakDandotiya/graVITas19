@@ -144,7 +144,7 @@
     this.items = [];
     this.xOrigin =
       options.xOrigin === null ? $container.width() * 0.5 : options.xOrigin;
-
+    console.log("jssdhbvsjfb");
     this.yOrigin =
       options.yOrigin === null ? $container.height() * 0.5 : options.yOrigin;
     this.xRadius =
@@ -659,9 +659,9 @@
   // The jQuery plugin
   //
 
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
   var abc = window.innerWidth;
-  console.log(abc);
+  // console.log(abc);
   $.fn.Cloud9Carousel = function(options) {
     return this.each(function() {
       /* For full list of options see the README */
