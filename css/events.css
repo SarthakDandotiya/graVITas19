@@ -224,8 +224,9 @@ nav,
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  transition: 0.8s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 .flip-box:hover .flip-box-inner {
@@ -243,6 +244,9 @@ nav,
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
 }
 
 .flip-box-front {
