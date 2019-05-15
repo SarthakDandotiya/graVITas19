@@ -53,7 +53,7 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         $scope.individual = response.data;
         $scope.working1 = true;
         $("." + id + " .content").html(
-          "<div class='event_desc'></div><br /><div class='event_date'></div><div class='event_time'></div> <div class='event_venue'></div><div class='event_corrd'></div><div class='event_fees'></div><div class='event_prize'></div>"
+          " <div class='event_desc'></div><br /> <div class='row no-pad'><div class='col l5 no-pad'><div class='event_date'></div><div class='event_time'></div> <div class='event_venue'></div></div><div class='no-pad col l7'><div class='event_fees'></div><div class='event_prize'></div><div class='event_coor'></div></div></div><br><button class='btn right' disabled>Register</button>"
         );
         $("." + id + " .content .event_desc").html(
           $scope.individual.description
@@ -67,7 +67,13 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         $("." + id + " .content .event_venue").html(
           "<b>Venue:</b> " + $scope.individual.venue.requested.building
         );
-        // $("." + id + " .content .event_coor").html($scope.individual.description);
+        $("." + id + " .content .event_coor").html(
+          "<b>Event Co-ordinator: </b>" +
+            $scope.individual.coordinators[0].name +
+            " (" +
+            $scope.individual.coordinators[0].phone +
+            ")"
+        );
         $("." + id + " .content .event_fees").html(
           "<b>Registration Fees: </b>&#8377; " + $scope.individual.fees
         );

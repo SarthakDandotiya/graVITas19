@@ -346,6 +346,9 @@ nav,
 .event_desc {
   text-align: justify !important;
 }
+.left_border {
+  border-left: 3px solid #333;
+}
 .iziModal {
   display: none;
   position: fixed;
