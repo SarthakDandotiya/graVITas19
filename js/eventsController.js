@@ -8,6 +8,7 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
     $scope.events = response.data;
     $scope.category;
     $scope.working = false;
+
     $("#mix-wrapper").mixItUp({
       load: {
         sort: "order:asc"
@@ -51,18 +52,23 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         console.log("EVENT Individual", response.data);
         $scope.individual = response.data;
         $scope.working1 = true;
-        $("." + id + " .event_desc").html($scope.individual.description);
-        $("." + id + " .event_date").html(
+        $("." + id + " .content").html(
+          "<div class='event_desc'></div><br /><div class='event_date'></div> <div class='event_duration'></div><div class='event_corrd'></div><div class='event_fees'></div><div class='event_prize'></div>"
+        );
+        $("." + id + " .content .event_desc").html(
+          $scope.individual.description
+        );
+        $("." + id + " .content .event_date").html(
           "<b>Date:</b> " + $scope.individual.date + ",2019"
         );
-        $("." + id + " .event_duration").html(
+        $("." + id + " .content .event_duration").html(
           "<b>Duration:</b> " + $scope.individual.duration + "hrs"
         );
-        // $("." + id + " .event_coor").html($scope.individual.description);
-        $("." + id + " .event_fees").html(
+        // $("." + id + " .content .event_coor").html($scope.individual.description);
+        $("." + id + " .content .event_fees").html(
           "<b>Registration Fees: </b>&#8377; " + $scope.individual.fees
         );
-        $("." + id + " .event_prize").html(
+        $("." + id + " .content .event_prize").html(
           "<b>Prize Money: </b>&#8377; " + $scope.individual.prize
         );
       });
