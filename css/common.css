@@ -108,3 +108,31 @@ a {
   left: 50%;
   transform: translate(-50%, 0%);
 }
+
+.back-arrow {
+  height: 18px;
+  margin-right: 6px;
+}
+.back-btn {
+  margin: 4px;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  text-decoration: underline solid white;
+  cursor: pointer;
+}
+header {
+  /* height: 40vh;
+	min-height: 300px; */
+  width: 100%;
+  background-color: #222;
+  color: white;
+  position: relative;
+  /* padding: 6% 5%; */
+}
