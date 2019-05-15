@@ -60,10 +60,10 @@
       <!-- EVENTS -->
       <section id="events">
         <div class="row">
+          <!-- ---------------------------------------Event Category-------------------------------------------- -->
           <div class="event_category col l4 s12">
             <h4>EVENTS</h4>
             <div>&nbsp;</div>
-            <!-- <a href="#" class="cta">ALL EVENTS</a> -->
             <div class="wrap">
               <div id="showcase" class="noselect">
                 <div class="card">
@@ -72,9 +72,6 @@
                     <img src="img/event_categories/web-settings.png" />
                   </div>
                   <div>&nbsp;</div>
-                  <!-- <div class="btn">
-                        All
-                      </div> -->
                   <button class="filter-btn btn all" data-filter=".all">
                     All
                   </button>
@@ -165,28 +162,17 @@
             </div>
             <!-- end of wrap -->
           </div>
-          <div class="event_cards col l8 s12">
-            <!-- <nav class="search">
-              <div class="nav-wrapper">
-                <form>
-                  <div class="input-field">
-                    <input id="search" type="search" required />
-                    <label class="label-icon" for="search"
-                      ><i class="material-icons">search</i></label
-                    >
-                    <i class="material-icons">close</i>
-                  </div>
-                </form>
-              </div>
-            </nav> -->
 
+          <!-- -----------------------Event Cards------------------------------------------------------ -->
+          <div class="event_cards col l8 s12">
             <input type="text" id="input" placeholder="Search" />
 
             <ul class="row allevents" id="mix-wrapper">
               <li
-                class="col l4 s12 mix-target {{ event.category }} all"
+                class="trigger col l4 s12 mix-target {{ event.category }} all"
                 ng-repeat="event in events | filter:eventSearch | orderBy:'name'"
-                ng-cloak
+                ng-click="show(event._id)"
+                data-iziModal-open="#modal-{{ event._id }} "
               >
                 <div class="pa-bot flip-box">
                   <div class="flip-box-inner">
@@ -228,6 +214,26 @@
         </div>
       </section>
 
+      <!-- -------------------------Event Details----------------------------------------------- -->
+      <div ng-repeat="event in events">
+        <div
+          id="modal-{{ event._id }}"
+          class="iziModal1 {{ event._id }}"
+          data-izimodal-title="{{ event.name }}"
+          data-izimodal-subtitle="{{
+            event.organization.join(',').toUpperCase()
+          }}"
+        >
+          <div class="event_desc"></div>
+          <br />
+          <div class="event_date"></div>
+          <div class="event_duration"></div>
+          <div class="event_corrd"></div>
+          <div class="event_fees"></div>
+          <div class="event_prize"></div>
+        </div>
+      </div>
+
       <!-- FOOTER -->
       <footer id="footer">
         <img src="./img/vit_white.png" alt="vit_logo" class="vit-logo" />
@@ -257,11 +263,12 @@
     <script src="js/modernizr.min.js"></script>
 
     <!-- ===================================EVENTS PAGE SCRIPTS===================================== -->
-    <!-- <script src="js/angular-sanitize.js"></script> -->
     <script src="js/angular.min.js"></script>
+    <script src="js/angular-sanitize.js"></script>
     <script src="js/eventsController.js"></script>
     <script src="js/content-filter.js"></script>
     <script src="js/searchbar.js"></script>
+    <script src="js/iziModal.js"></script>
     <script>
       $(document).ready(function() {
         if (window.innerWidth >= 993) {

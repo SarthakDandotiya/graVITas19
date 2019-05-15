@@ -14,7 +14,6 @@ $(function() {
   })();
 
   $("#input").keyup(function() {
-    console.log("fgcgvhjbcfghvhjbj");
     // Delay function invoked to make sure user stopped typing
     delay(function() {
       inputText = $("#input")
@@ -25,7 +24,6 @@ $(function() {
       if (inputText.length > 0) {
         $(".mix-target").each(function() {
           $this = $("this");
-          console.log($(this).children(".title"));
           // add item to be filtered out if input text matches items inside the title
           if (
             $(this)

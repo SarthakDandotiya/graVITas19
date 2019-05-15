@@ -102,8 +102,6 @@ a {
   background-color: #0cd1eb !important;
 }
 .navbtncontainer {
-  /* background-color: #0cd1eb !important; */
-  z-index: 10000 !important;
   position: absolute;
   text-align: center;
   margin: auto;

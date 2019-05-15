@@ -1,6 +1,7 @@
-var app = angular.module("myApp", []);
-app.controller("eventCtrl", function($scope, $http) {
+var app = angular.module("myApp", ["ngSanitize"]);
+app.controller("eventCtrl", function($scope, $http, $sce) {
   $scope.working = true;
+  $scope.working1 = false;
   const URL = "https://gravitas-18.herokuapp.com/events";
   $http.get(URL).then(response => {
     // console.log("EVENTS ", response.data);
@@ -45,15 +46,39 @@ app.controller("eventCtrl", function($scope, $http) {
     if (id == "5bb48680960c910015a0224f") {
       window.location.href = "democracy-wall.html";
     } else {
-      sessionStorage.setItem(
-        "category",
-        jQuery("#showcase .card .btn a.selected")
-          .attr("data-type")
-          .toLowerCase()
-      );
-      sessionStorage.setItem("ID", id);
-      window.location.href = "eventsingle.html";
+      const URL2 = "https://gravitas-18.herokuapp.com/events/" + id;
+      $http.get(URL2).then(response => {
+        console.log("EVENT Individual", response.data);
+        $scope.individual = response.data;
+        $scope.working1 = true;
+        $("." + id + " .event_desc").html($scope.individual.description);
+        $("." + id + " .event_date").html(
+          "<b>Date:</b> " + $scope.individual.date + ",2019"
+        );
+        $("." + id + " .event_duration").html(
+          "<b>Duration:</b> " + $scope.individual.duration + "hrs"
+        );
+        // $("." + id + " .event_coor").html($scope.individual.description);
+        $("." + id + " .event_fees").html(
+          "<b>Registration Fees: </b>&#8377; " + $scope.individual.fees
+        );
+        $("." + id + " .event_prize").html(
+          "<b>Prize Money: </b>&#8377; " + $scope.individual.prize
+        );
+      });
+      var abc = window.innerWidth;
+      $(".iziModal1").iziModal({
+        width: abc >= 740 ? 700 : abc - 30,
+        radius: 5,
+        padding: 20,
+        // group: "products",
+        loop: true
+      });
     }
+  };
+
+  $scope.print = function() {
+    console.log("print");
   };
 
   $scope.toTitleCase = function(str) {
