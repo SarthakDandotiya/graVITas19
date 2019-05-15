@@ -30,12 +30,12 @@ $(function() {
               .find(".title")
               .html()
               .toLowerCase()
-              .match(inputText) ||
+              .match(inputText.trim()) ||
             $(this)
               .find(".org")
               .html()
               .toLowerCase()
-              .match(inputText)
+              .match(inputText.trim())
           ) {
             $matching = $matching.add(this);
           } else {

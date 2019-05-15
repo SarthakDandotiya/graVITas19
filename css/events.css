@@ -178,6 +178,9 @@ nav,
 #events {
   background-color: #222;
 }
+/* .cheating {
+  height: 10vh !important;
+} */
 #events h4 {
   color: white;
 }
@@ -362,6 +365,16 @@ nav,
   transition: margin-top 0.3s ease, height 0.3s ease;
   transform: translateZ(0);
   box-sizing: border-box;
+}
+@media (max-height: 700px) {
+  .iziModal {
+    max-height: 550px !important;
+  }
+}
+@media (max-height: 570px) {
+  .iziModal {
+    max-height: 520px !important;
+  }
 }
 .iziModal * {
   box-sizing: border-box;

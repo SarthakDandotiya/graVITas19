@@ -48,6 +48,16 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
       window.location.href = "democracy-wall.html";
     } else {
       const URL2 = "https://gravitas-18.herokuapp.com/events/" + id;
+
+      var abc = window.innerWidth;
+      $(".iziModal1").iziModal({
+        width: abc >= 740 ? 700 : abc - 30,
+        // height: window.innerHeight >= 620 ? 600 : window.innerHeight - 90,
+        radius: 5,
+        padding: 20,
+        // group: "products",
+        loop: true
+      });
       $http.get(URL2).then(response => {
         console.log("EVENT Individual", response.data);
         $scope.individual = response.data;
@@ -81,14 +91,6 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
           $("." + id + " .content .event_prize").html(
             "<b>Prize Money: </b>&#8377; " + $scope.individual.prize
           );
-      });
-      var abc = window.innerWidth;
-      $(".iziModal1").iziModal({
-        width: abc >= 740 ? 700 : abc - 30,
-        radius: 5,
-        padding: 20,
-        // group: "products",
-        loop: true
       });
     }
   };
