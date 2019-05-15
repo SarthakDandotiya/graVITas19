@@ -53,24 +53,28 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         $scope.individual = response.data;
         $scope.working1 = true;
         $("." + id + " .content").html(
-          "<div class='event_desc'></div><br /><div class='event_date'></div> <div class='event_duration'></div><div class='event_corrd'></div><div class='event_fees'></div><div class='event_prize'></div>"
+          "<div class='event_desc'></div><br /><div class='event_date'></div><div class='event_time'></div> <div class='event_venue'></div><div class='event_corrd'></div><div class='event_fees'></div><div class='event_prize'></div>"
         );
         $("." + id + " .content .event_desc").html(
           $scope.individual.description
         );
         $("." + id + " .content .event_date").html(
-          "<b>Date:</b> " + $scope.individual.date + ",2019"
+          "<b>Date:</b> " + $scope.individual.date + ",2019 "
         );
-        $("." + id + " .content .event_duration").html(
-          "<b>Duration:</b> " + $scope.individual.duration + "hrs"
+        $("." + id + " .content .event_time").html(
+          "<b>Timing:</b> " + $scope.individual.timing
+        );
+        $("." + id + " .content .event_venue").html(
+          "<b>Venue:</b> " + $scope.individual.venue.requested.building
         );
         // $("." + id + " .content .event_coor").html($scope.individual.description);
         $("." + id + " .content .event_fees").html(
           "<b>Registration Fees: </b>&#8377; " + $scope.individual.fees
         );
-        $("." + id + " .content .event_prize").html(
-          "<b>Prize Money: </b>&#8377; " + $scope.individual.prize
-        );
+        if ($scope.individual.prize != undefined)
+          $("." + id + " .content .event_prize").html(
+            "<b>Prize Money: </b>&#8377; " + $scope.individual.prize
+          );
       });
       var abc = window.innerWidth;
       $(".iziModal1").iziModal({

@@ -342,6 +342,10 @@ nav,
 * http://izimodal.marcelodolce.com
 * by Marcelo Dolce.
 */
+
+.event_desc {
+  text-align: justify !important;
+}
 .iziModal {
   display: none;
   position: fixed;
