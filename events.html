@@ -191,7 +191,13 @@
           <div class="event_cards col l8 s12">
             <input type="text" id="input" placeholder="Search" />
 
-            <ul class="row allevents" id="mix-wrapper">
+            <p class="row center loader" ng-show="working">
+              <br /><br />
+              <!-- <img src="img/loading.gif" id="loading" /><br /> -->
+              LOADING..
+            </p>
+
+            <ul class="row allevents" id="mix-wrapper" ng-show="!working">
               <li
                 class="trigger col l4 s12 mix-target {{ event.category }} all"
                 ng-repeat="event in events | filter:eventSearch | orderBy:'name'"
@@ -234,6 +240,9 @@
                 </div>
               </li>
             </ul>
+            <div class="gra-fail-message" hidden>
+              <p class="center row" style="color:white;"><br />NOT FOUND..</p>
+            </div>
           </div>
         </div>
       </section>
@@ -287,8 +296,8 @@
     <!-- SCRIPTS -->
     <script src="./js/jquery.js"></script>
     <script src="./js/materialize.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/slick.min.js"></script> -->
+    <!-- <script src="./js/main.js"></script> -->
 
     <!-- ===============================EVENTS SECTION SCRIPTS================================== -->
     <script src="js/jquery.mixitup.min.js"></script>

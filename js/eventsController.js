@@ -2,12 +2,12 @@ var app = angular.module("myApp", ["ngSanitize"]);
 app.controller("eventCtrl", function($scope, $http, $sce) {
   $scope.working = true;
   $scope.working1 = false;
+  var count = 0;
   const URL = "https://gravitas-18.herokuapp.com/events";
   $http.get(URL).then(response => {
     // console.log("EVENTS ", response.data);
     $scope.events = response.data;
     $scope.category;
-    $scope.working = false;
 
     $("#mix-wrapper").mixItUp({
       load: {
@@ -22,7 +22,18 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         filter: ".filter-btn",
         sort: ".sort-btn"
       },
+      // controls: {
+      //   enable: false
+      // },
       callbacks: {
+        onMixStart: function() {
+          $(".gra-fail-message").fadeOut(0);
+        },
+        onMixFail: function() {
+          // console.log("fail");
+          count = count + 1;
+          if (count != 1) $(".gra-fail-message").fadeIn(200);
+        },
         onMixEnd: function(state) {
           // console.log("sdjbksdjnfskfjjslfkjlkf");
           // console.log(state);
@@ -41,6 +52,8 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
       $("button.megathon").click();
     else if (localStorage.getItem("storageName") == "workshops")
       $("button.workshops").click();
+
+    $scope.working = false;
   });
 
   $scope.show = function(id) {
@@ -59,7 +72,7 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         loop: true
       });
       $http.get(URL2).then(response => {
-        console.log("EVENT Individual", response.data);
+        // console.log("EVENT Individual", response.data);
         $scope.individual = response.data;
         $scope.working1 = true;
         $("." + id + " .content").html(
@@ -93,10 +106,6 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
           );
       });
     }
-  };
-
-  $scope.print = function() {
-    console.log("print");
   };
 
   $scope.toTitleCase = function(str) {

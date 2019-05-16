@@ -144,7 +144,7 @@
     this.items = [];
     this.xOrigin =
       options.xOrigin === null ? $container.width() * 0.5 : options.xOrigin;
-    console.log("jssdhbvsjfb");
+
     this.yOrigin =
       options.yOrigin === null ? $container.height() * 0.5 : options.yOrigin;
     this.xRadius =

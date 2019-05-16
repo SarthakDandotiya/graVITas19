@@ -27,7 +27,6 @@ $(document).ready(function() {
 
 // GALLERY
 let sts = window.innerWidth < 650 ? (window.innerWidth < 450 ? 1 : 2) : 3;
-console.log(window.innerWidth);
 $(".img-slide").slick({
   lazyLoad: "progressive",
   autoplay: true,
