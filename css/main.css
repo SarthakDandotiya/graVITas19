@@ -380,3 +380,60 @@ main {
 	margin: 5% 0;
 	flex-flow: wrap;
 }
+
+/* -----SPONSOR_PAGE-------------------------------------------------------------------------------------*/
+
+.quick-facts,
+.sponsor-benefits {
+	margin-top: 2em;
+	margin-bottom: 4em;
+}
+
+.quick-facts ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.quick-facts ul li {
+	margin: 16px 0;
+	padding: 16px;
+	background-color: #f0f0f0;
+	width: 100%;
+	text-align: center;
+}
+
+.sponsor-benefits ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sponsor-benefits ul li {
+	margin: 16px 0;
+	padding: 16px;
+	background-color: #f0f0f0;
+	width: 100%;
+	text-align: center;
+}
+
+.sponsor-heading {
+	margin-top: 4em;
+}
+
+.logo-container {
+	margin-top: 2em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo-container img {
+	max-width: 250px;
+	max-height: 150px;
+	margin: 3em 2%;
+}
