@@ -208,6 +208,7 @@ nav,
 /* -----FOOTER---------------------------------------------------------------------------*/
 
 #footer {
+	z-index: 10;
 	margin-top: -1.25%;
 	background-color: #333;
 	display: flex;
@@ -244,6 +245,37 @@ nav,
 .socials a i:hover {
 	color: #0cd1eb;
 	transition: 0.5s;
+}
+
+#contact {
+	text-align: center;
+}
+
+#contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5% 1% 0;
+}
+
+#contact div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#contact div img {
+	height: 24px;
+	margin-right: 10px;
+}
+
+#contact div p {
+	margin: 1% 0;
+	font-size: 16px;
+	color: white;
+	text-align: center;
 }
 
 /* -----TEAM_PAGE---------------------------------------------------------------------------*/
