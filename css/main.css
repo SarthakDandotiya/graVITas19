@@ -353,6 +353,14 @@ header h2 {
 	width: 100%;
 }
 
+.name {
+	font-weight: bold !important;
+}
+
+.card-content:nth-child(1) {
+	font-weight: bold !important;
+}
+
 .card-content p {
 	text-align: center;
 }
@@ -414,7 +422,7 @@ main {
 .sponsor-benefits ul li {
 	margin: 16px 0;
 	padding: 16px;
-	background-color: #f0f0f0;
+	/* background-color: #f0f0f0; */
 	width: 100%;
 	text-align: center;
 }
