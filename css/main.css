@@ -296,15 +296,28 @@ h4 {
 	top: 6px;
 	left: 6px;
 	text-decoration: underline solid white;
+	z-index: 100;
 }
 
 header h2 {
 	text-align: left;
 }
 
+header {
+	max-height: 300px;
+	padding: 0;
+}
+
+.particles-js-canvas-el {
+	height: 100%;
+}
+
 .heading-container {
 	width: 100%;
 	text-align: center;
+	position: absolute;
+	z-index: 99;
+	top: 20%;
 }
 
 .card {
@@ -357,10 +370,6 @@ header h2 {
 	font-weight: bold !important;
 }
 
-.card-content:nth-child(1) {
-	font-weight: bold !important;
-}
-
 .card-content p {
 	text-align: center;
 }
@@ -406,10 +415,11 @@ main {
 
 .quick-facts ul li {
 	margin: 16px 0;
-	padding: 16px;
-	background-color: #f0f0f0;
+	/* padding: 16px; */
+	/* background-color: #f0f0f0; */
 	width: 100%;
-	text-align: center;
+	text-align: left;
+	/* list-style-type: disc; */
 }
 
 .sponsor-benefits ul {
@@ -421,10 +431,10 @@ main {
 
 .sponsor-benefits ul li {
 	margin: 16px 0;
-	padding: 16px;
+	/* padding: 16px; */
 	/* background-color: #f0f0f0; */
 	width: 100%;
-	text-align: center;
+	text-align: left;
 }
 
 .sponsor-heading {
