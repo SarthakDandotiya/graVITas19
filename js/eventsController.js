@@ -3,7 +3,7 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
   $scope.working = true;
   $scope.working1 = false;
   var count = 0;
-  const URL = "https://gravitas-18.herokuapp.com/events";
+  const URL = "https://gravitas19.herokuapp.com/events";
   $http.get(URL).then(response => {
     // console.log("EVENTS ", response.data);
     $scope.events = response.data;
@@ -60,7 +60,7 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
     if (id == "5bb48680960c910015a0224f") {
       window.location.href = "democracy-wall.html";
     } else {
-      const URL2 = "https://gravitas-18.herokuapp.com/events/" + id;
+      const URL2 = "https://gravitas19.herokuapp.com/events/" + id;
 
       var abc = window.innerWidth;
       $(".iziModal1").iziModal({
@@ -76,7 +76,7 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         $scope.individual = response.data;
         $scope.working1 = true;
         $("." + id + " .content").html(
-          " <div class='event_desc'></div><br /> <div class='row no-pad'><div class='col l5 no-pad'><div class='event_date'></div><div class='event_time'></div> <div class='event_fees'></div></div><div class='no-pad col l7'><div class='event_prize'></div><div class='event_venue'></div><div class='event_coor'></div></div></div><br><button class='btn right' disabled>Register</button>"
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex possimus aspernatur ipsam quisquam et ab, nesciunt illo a. Perspiciatis, olorum! Sed nihil illo maiores qui, ullam delectus nesciunt necessitatibus fuga, quod blanditiis recusandae aut sit modicupiditate tenetur dolorum minus cum fugit suscipit. Non, nulla.Delectus sint qui itaque ipsam?<div class='event_desc'></div><br /> <div class='row no-pad'><div class='col l5 no-pad'><div class='event_date'></div><div class='event_time'></div> <div class='event_fees'></div></div><div class='no-pad col l7'><div class='event_prize'></div><div class='event_venue'></div><div class='event_coor'></div></div></div><br><div><button class='btn right' disabled>Register</button></div><div>&nbsp;</div><div>&nbsp;</div>"
         );
         $("." + id + " .content .event_desc").html(
           $scope.individual.description

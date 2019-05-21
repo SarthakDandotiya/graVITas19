@@ -175,8 +175,12 @@ nav,
 }
 
 /* --------EVENTS------------------------------------------------------------------------- */
+
 #events {
   background-color: #222;
+  /* background-image: url("../img/7135.jpg"); */
+  /* background-size: 100% 120% !important; */
+  /* background-repeat: no-repeat; */
 }
 /* .cheating {
   height: 10vh !important;
@@ -188,7 +192,8 @@ nav,
   padding: 1em 2.5% 0 2.5%;
 }
 .event_category {
-  background-color: #222;
+  /* background-color: #222; */
+  background: transparent !important;
 }
 
 .event_cards {
@@ -372,6 +377,12 @@ nav,
 @media (max-height: 700px) {
   .iziModal {
     max-height: 550px !important;
+  }
+}
+
+@media (max-height: 850px) {
+  .iziModal {
+    max-height: 620px !important;
   }
 }
 @media (max-height: 570px) {

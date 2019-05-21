@@ -44,6 +44,7 @@ $(function() {
           }
         });
         $("#mix-wrapper").mixItUp("filter", $matching);
+        // console.log($matching.length);
       } else {
         // resets the filter to show all item if input is empty
         $("#mix-wrapper").mixItUp("filter", ".all");
