@@ -76,7 +76,7 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         $scope.individual = response.data;
         $scope.working1 = true;
         $("." + id + " .content").html(
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex possimus aspernatur ipsam quisquam et ab, nesciunt illo a. Perspiciatis, olorum! Sed nihil illo maiores qui, ullam delectus nesciunt necessitatibus fuga, quod blanditiis recusandae aut sit modicupiditate tenetur dolorum minus cum fugit suscipit. Non, nulla.Delectus sint qui itaque ipsam?<div class='event_desc'></div><br /> <div class='row no-pad'><div class='col l5 no-pad'><div class='event_date'></div><div class='event_time'></div> <div class='event_fees'></div></div><div class='no-pad col l7'><div class='event_prize'></div><div class='event_venue'></div><div class='event_coor'></div></div></div><br><div><button class='btn right' disabled>Register</button></div><div>&nbsp;</div><div>&nbsp;</div>"
+          "<div class='event_desc'></div><br /> <div class='row no-pad'><div class='col l5 no-pad'><div class='event_date'></div><div class='event_time'></div> <div class='event_fees'></div></div><div class='no-pad col l7'><div class='event_prize'></div><div class='event_venue'></div><div class='event_coor'></div></div></div><br><div><button class='btn right' disabled>Register</button></div><div>&nbsp;</div><div>&nbsp;</div>"
         );
         $("." + id + " .content .event_desc").html(
           $scope.individual.description
