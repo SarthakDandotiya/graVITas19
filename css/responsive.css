@@ -23,20 +23,20 @@
 }
 
 @media only screen and (max-width: 600px) {
-	header {
-		min-height: 275px;
-	}
-	.heading-container {
-		top: 20%;
-	}
-	.heading-container h2 {
-		font-size: 1.8rem;
-		margin: 4.5rem 0 12% 0;
-	}
-	.back-arrow {
-		height: 12px;
-	}
-	.back-btn {
-		font-size: 15px;
-	}
+  header {
+    min-height: 275px;
+  }
+  .heading-container {
+    top: 20%;
+  }
+  .heading-container h2 {
+    font-size: 1.8rem;
+    margin: 4.5rem 0 12% 0;
+  }
+  .back-arrow {
+    height: 12px;
+  }
+  .back-btn {
+    font-size: 15px;
+  }
 }
