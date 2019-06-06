@@ -142,6 +142,9 @@ html {
 }
 
 @media only screen and (max-width: 750px) {
+  .heading-container {
+    top: 20%;
+  }
   .heading-container h2 {
     font-size: 2.2em;
     margin: 2.2em 0 12% 0;
@@ -154,7 +157,7 @@ html {
     min-height: 265px;
   }
   .heading-container {
-    top: 13.5%;
+    top: 20%;
   }
   .heading-container h2 {
     font-size: 2.5rem;
