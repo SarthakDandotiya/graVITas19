@@ -217,11 +217,6 @@ nav,
 	line-height: 1em;
 }
 
-#particles-js {
-	/* max-height: 300px; */
-	/* z-index: -10; */
-}
-
 .gallery-container {
 	display: flex;
 	flex-direction: row;
