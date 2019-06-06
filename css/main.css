@@ -217,6 +217,29 @@ nav,
 	line-height: 1em;
 }
 
+#particles-js {
+	/* max-height: 300px; */
+	/* z-index: -10; */
+}
+
+.gallery-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-flow: wrap;
+	z-index: 10;
+	/* background: #222; */
+}
+
+.gallery-img {
+	z-index: 10;
+	/* width: 25%; */
+	max-width: 320px;
+	max-height: 190px;
+	margin: 2em 1%;
+}
+
 /* -----TEAM & SPONSOR------------------------------------------------------------*/
 
 #tns {
@@ -343,6 +366,7 @@ h4 {
 .back-arrow {
 	height: 18px;
 	margin-right: 6px;
+	z-index: 100;
 }
 
 .back-btn {
@@ -379,6 +403,10 @@ header {
 	position: absolute;
 	z-index: 99;
 	top: 20%;
+}
+
+.gallery-heading {
+	top: 30%;
 }
 
 .card {
