@@ -503,7 +503,7 @@ main {
 	/* background-color: #f0f0f0; */
 	width: 100%;
 	text-align: left;
-	/* list-style-type: disc; */
+	list-style-type: disc;
 }
 
 .sponsor-benefits ul {
@@ -519,6 +519,7 @@ main {
 	/* background-color: #f0f0f0; */
 	width: 100%;
 	text-align: left;
+	list-style-type: disc;
 }
 
 .sponsor-heading {
