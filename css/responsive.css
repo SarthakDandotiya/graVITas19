@@ -22,6 +22,19 @@
 	}
 }
 
+@media only screen and (max-width: 700px) {
+	#vit-landing-logo {
+		/* display: block;
+		margin: 1% auto; */
+		position: absolute;
+		bottom: 32px;
+		/* left: 50%; */
+		left: calc(50% - 50px);
+		/* right: 32px; */
+		width: 100px;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	header {
 		min-height: 275px;

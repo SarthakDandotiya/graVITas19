@@ -133,6 +133,17 @@ nav,
 	padding: 0;
 }
 
+#vit-landing-logo {
+	/* display: block;
+	margin: 1% auto; */
+	position: absolute;
+	bottom: 32px;
+	/* left: 50%; */
+	/* left: calc(50% - 50px); */
+	right: 32px;
+	width: 150px;
+}
+
 /* -----ABOUT-----------------------------------------------------------------------------*/
 
 #about {
