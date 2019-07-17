@@ -92,8 +92,8 @@ nav,
 }
 
 .nav-logo {
-	margin: 6% 5%;
-	height: 40px;
+	margin: 3% 5%;
+	height: 50px;
 }
 
 .underline li a {
@@ -140,8 +140,32 @@ nav,
 	bottom: 32px;
 	/* left: 50%; */
 	/* left: calc(50% - 50px); */
-	right: 32px;
+	left: 32px;
 	width: 150px;
+}
+
+.powered-by {
+	position: absolute;
+	bottom: 32px;
+	right: 32px;
+	/* width: 150px; */
+}
+
+.powered-by p {
+	margin-left: 16px;
+}
+
+.pb-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.powered-by .pb-container img {
+	display: inline-block;
+	height: 40px;
+	margin-left: 16px;
 }
 
 /* -----ABOUT-----------------------------------------------------------------------------*/
