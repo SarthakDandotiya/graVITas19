@@ -53,11 +53,9 @@
 		margin-left: 0;
 	}
 
-	.pb-container {
-		/* flex-direction: column; */
-		/* justify-content: left; */
+	#pb2 {
+		margin-left: 16px;
 	}
-
 	.powered-by .pb-container img {
 		margin: 0;
 		height: 32px;
