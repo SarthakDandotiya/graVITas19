@@ -553,6 +553,7 @@ main {
 	width: 100%;
 	text-align: left;
 	list-style-type: disc;
+	margin-left: 32px;
 }
 
 .sponsor-benefits ul {
@@ -560,6 +561,7 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-left: 16px;
 }
 
 .sponsor-benefits ul li {
