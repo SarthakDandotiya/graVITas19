@@ -89,4 +89,7 @@
 		left: auto;
 		right: auto;
 	} */
+	.info h2 {
+		font-size: 18px !important;
+	}
 }
