@@ -1,6 +1,10 @@
 // NAVBAR
 $(document).ready(function() {
-	$('.sidenav').sidenav();
+	$('.sidenav')
+		.sidenav()
+		.on('click tap', 'li a', () => {
+			$('.sidenav').sidenav('close');
+		});
 });
 
 var prevScrollpos = window.pageYOffset;

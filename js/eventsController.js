@@ -69,6 +69,8 @@ app.controller('eventCtrl', function($scope, $http, $sce) {
 				// height: window.innerHeight >= 620 ? 600 : window.innerHeight - 90,
 				radius: 5,
 				padding: 20,
+				// bodyOverflow: true,
+				// openFullscreen: true,
 				// group: "products",
 				loop: true
 			});

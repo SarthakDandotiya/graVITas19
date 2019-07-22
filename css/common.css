@@ -17,10 +17,12 @@ a {
 	position: relative;
 	/* display: table-cell; */
 	vertical-align: middle;
+	/* margin-left: 5%; */
 }
 @media (max-width: 992px) {
 	.wrap {
 		height: 50vh;
+		margin-left: 0%;
 	}
 }
 

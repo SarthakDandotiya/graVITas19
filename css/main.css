@@ -92,8 +92,8 @@ nav,
 }
 
 .nav-logo {
-	margin: 2% 5%;
-	height: 50px;
+	margin: 4% 5%;
+	height: 45px;
 }
 
 .underline li a {
@@ -131,6 +131,7 @@ nav,
 	height: 100vh;
 	margin: 0;
 	padding: 0;
+	/* min-height: 420px; */
 }
 
 #vit-landing-logo {
@@ -166,6 +167,16 @@ nav,
 	display: inline-block;
 	height: 40px;
 	margin-left: 16px;
+}
+
+#landing-logo {
+	width: 45%;
+	min-width: 250px;
+	margin-bottom: 2%;
+}
+
+#tdt {
+	font-size: 1em;
 }
 
 /* -----ABOUT-----------------------------------------------------------------------------*/
@@ -397,6 +408,14 @@ h4 {
 	margin-top: 2em;
 }
 
+.team-heading-2 {
+	width: 100%;
+	display: inline-block;
+	margin-top: 1em;
+	color: rgb(165, 165, 165);
+	border: none !important;
+}
+
 .back-arrow {
 	height: 18px;
 	margin-right: 6px;
@@ -533,6 +552,12 @@ main {
 	align-items: center;
 	margin: 4% 0 0 0;
 	flex-flow: wrap;
+}
+
+p span {
+	font-weight: bold;
+	color: #555;
+	font-family: 'Custom' !important;
 }
 
 /* -----SPONSOR_PAGE-------------------------------------------------------------------------------------*/
