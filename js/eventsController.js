@@ -77,7 +77,10 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         // console.log("EVENT Individual", response.data);
         $scope.individual = response.data;
         $scope.working1 = true;
-        if ($scope.individual._id != "5cd2afe68271f70017dbc3a8") {
+        if (
+          $scope.individual._id != "5cd2afe68271f70017dbc3a8" &&
+          $scope.individual._id != "5cd2ac858271f70017dbc3a5"
+        ) {
           $("." + id + " .content").html(
             "<div class='event_desc'></div><br /> <div class='row no-pad'><div class='col l5 no-pad'><div class='event_date'></div><div class='event_time'></div> <div class='event_fees'></div></div><div class='no-pad col l7'><div class='event_prize'></div><div class='event_venue'></div><div class='event_coor'></div></div></div><br><div><a href='http://info.vit.ac.in/gravitas2019/gravitas_login.asp'><button class='btn right' disabled>Register</button></a></div><div>&nbsp;</div><div>&nbsp;</div>"
           );
