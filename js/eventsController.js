@@ -8,7 +8,6 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
     // console.log("EVENTS ", response.data);
     $scope.events = response.data;
     $scope.category;
-
     $("#mix-wrapper").mixItUp({
       load: {
         sort: "order:asc"
@@ -41,6 +40,7 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
       }
     });
 
+    console.log(localStorage.getItem("storageName"));
     if (localStorage.getItem("storageName") == "all") $("button.all").click();
     else if (localStorage.getItem("storageName") == "premium")
       $("button.premium").click();
