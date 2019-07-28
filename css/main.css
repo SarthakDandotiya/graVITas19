@@ -420,6 +420,14 @@ h4 {
 	border: none !important;
 }
 
+.team-heading-3 {
+	width: 100%;
+	display: inline-block;
+	margin: 50px 0;
+	color: rgb(165, 165, 165);
+	border: none !important;
+}
+
 .team-heading-2 h5 {
 	margin-bottom: 40px;
 }
