@@ -33,6 +33,9 @@ $(function() {
     //
     // More codes: http://www.javascripter.net/faq/keycodes.htm
     //
+    //
+    // More codes: http://www.javascripter.net/faq/keycodes.htm
+    //
     switch (e.keyCode) {
       /* left arrow */
       case 37:
@@ -46,7 +49,7 @@ $(function() {
         if (
           $(".sel")
             .text()
-            .trim() == "Premium"
+            .trim() == "Premier"
         )
           $("button.workshops").click();
         if (
@@ -66,13 +69,14 @@ $(function() {
             .text()
             .trim() == "Non-Technical"
         )
-          $("button.megathon").click();
-        if (
-          $(".sel")
-            .text()
-            .trim() == "Megathon"
-        )
+          // $("button.megathon").click();
           $("button.all").click();
+        // if (
+        //   $(".sel")
+        //     .text()
+        //     .trim() == "Megathon"
+        // )
+        //   $("button.all").click();
 
         break;
 
@@ -84,13 +88,14 @@ $(function() {
             .text()
             .trim() == "All"
         )
-          $("button.megathon").click();
-        if (
-          $(".sel")
-            .text()
-            .trim() == "Megathon"
-        )
+          // $("button.megathon").click();
           $("button.non-technical").click();
+        // if (
+        //   $(".sel")
+        //     .text()
+        //     .trim() == "Megathon"
+        // )
+        //   $("button.non-technical").click();
         if (
           $(".sel")
             .text()

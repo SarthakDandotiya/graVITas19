@@ -35,28 +35,45 @@
   <body ng-app="myApp" ng-controller="eventCtrl" class="doodle-back">
     <div class="container-fluid">
       <!-- NAVIGATION BAR -->
-      <!-- <nav id="navbar">
+
+      <!-- NAVIGATION BAR -->
+      <nav id="navbar">
         <div class="nav-wrapper">
-          <a href="index.html" class="brand-logo"
+          <a href="#" class="brand-logo"
             ><img
               src="./img/gravitas-final-white.png"
               alt="Logo"
               class="nav-logo"
           /></a>
-
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"
             ><i class="material-icons">menu</i></a
           >
           <ul class="underline right hide-on-med-and-down">
-            <li><a class="" href="index.html">HOME</a></li>
+            <li><a class="scroll" href="index.html">HOME</a></li>
+            <li><a class="scroll" href="events.html">EVENTS</a></li>
+            <li><a class="scroll" href="team.html">TEAM</a></li>
+            <li><a class="scroll" href="sponsors.html">SPONSORS</a></li>
+            <li>
+              <a href="http://info.vit.ac.in/INEST/conference/index.html"
+                >CONFERENCE</a
+              >
+            </li>
           </ul>
         </div>
       </nav>
-      
 
       <ul class="sidenav" id="mobile-demo">
-        <li><a class="" href="index.html">HOME</a></li>
-      </ul> -->
+        <li><a class="scroll" href="index.html">HOME</a></li>
+        <li><a class="scroll" href="events.html">EVENTS</a></li>
+        <li><a class="scroll" href="team.html">TEAM</a></li>
+        <li><a class="scroll" href="sponsors.html">SPONSORS</a></li>
+        <li>
+          <a href="http://info.vit.ac.in/INEST/conference/index.html"
+            >CONFERENCE</a
+          >
+        </li>
+      </ul>
+
       <header id="header">
         <a href="./index.html#events" class="back-btn">
           <img src="./img/arrow-white.png" alt="arrow" class="back-arrow" />
@@ -143,19 +160,19 @@
                     </button>
                   </div>
 
-                  <div class="card">
+                  <!-- <div class="card">
                     <div>&nbsp;</div>
                     <div class="logo">
                       <img src="img/event_categories/training.png" />
                     </div>
                     <div>&nbsp;</div>
-                    <button
-                      class="filter-btn btn megathon"
-                      data-filter=".megathon"
+                    <a href="https://vithack.hackerearth.com/"><button
+                      class="filter-btn btn megathon" 
                     >
                       VITHACK
-                    </button>
-                  </div>
+                    </button></a>
+                    
+                  </div> -->
                 </div>
                 <!-- <div class="navbtncontainer center">
                   <button class="navbutton noselect left">
@@ -208,13 +225,19 @@
                   <div class="flip-box-inner">
                     <div class="no-pad flip-box-front">
                       <div class="no-pad col l4 s4">
-                        <div
+                        <!-- <div
                           class="card-img"
-                          style="background: url({{
+                          style="background-position:center;background-size:cover ;background: url({{
                             event.thumbnailUrl
                               ? event.thumbnailUrl
                               : 'img/template.jpg'
-                          }}); background-position:center;backgorund-size:contain"
+                          }});"
+                        ></div> -->
+                        <div
+                          class="card-img"
+                          style="background-position:center;background-size:cover ;background: url({{
+                            event.thumbnailUrl
+                          }});"
                         ></div>
                       </div>
                       <div class="col l8 s8">
@@ -243,7 +266,7 @@
             </ul>
             <div class="gra-fail-message" hidden>
               <p class="center row" style="color:white;">
-                <br />No Items Found
+                <br />Will be Updated Soon...
               </p>
             </div>
           </div>
@@ -299,7 +322,7 @@
     <script src="./js/jquery.js"></script>
     <script src="./js/materialize.min.js"></script>
     <!-- <script src="./js/slick.min.js"></script> -->
-    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/main.js"></script>
 
     <!-- ===============================EVENTS SECTION SCRIPTS================================== -->
     <script src="js/jquery.mixitup.min.js"></script>

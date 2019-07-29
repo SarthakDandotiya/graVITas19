@@ -29,10 +29,48 @@
   <body>
     <div class="container-fluid">
       <header id="particles-js">
-        <a href="./index.html" class="back-btn">
+        <!-- <a href="./index.html" class="back-btn">
           <img src="./img/arrow-white.png" alt="arrow" class="back-arrow" />
           Back</a
+        > -->
+  <!-- NAVIGATION BAR -->
+  <nav id="navbar">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo"
+          ><img
+            src="./img/gravitas-final-white.png"
+            alt="Logo"
+            class="nav-logo"
+        /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
         >
+        <ul class="underline right hide-on-med-and-down">
+          <li><a class="scroll" href="index.html">HOME</a></li>
+          <li><a class="scroll" href="events.html">EVENTS</a></li>
+          <li><a class="scroll" href="team.html">TEAM</a></li>
+          <li><a class="scroll" href="sponsors.html">SPONSORS</a></li>
+          <li>
+            <a href="http://info.vit.ac.in/INEST/conference/index.html"
+              >CONFERENCE</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="scroll" href="index.html">HOME</a></li>
+        <li><a class="scroll" href="events.html">EVENTS</a></li>
+        <li><a class="scroll" href="team.html">TEAM</a></li>
+        <li><a class="scroll" href="sponsors.html">SPONSORS</a></li>
+      <li>
+        <a href="http://info.vit.ac.in/INEST/conference/index.html"
+          >CONFERENCE</a
+        >
+      </li>
+    </ul>
+
         <div class="heading-container" id="team-header">
           <h2>
             TEAM 
@@ -293,32 +331,33 @@
             </div> -->
             <!--  -->
             <div class="center-align team-heading-2">
-                <h5>
-                  Web & Media
-                </h5>
-            </div>
-            <div class="custom-row-4">
+              <h5>
+                Web & Media
+              </h5>
+          </div>
+          <div class="custom-row-4">
+            
               <div class="card">
-                <div class="card-image">
-                  <img src="./img/team/student/arora.JPG" alt="patron" />
+                  <div class="card-image">
+                    <img src="./img/team/student/lakshay.jpg" alt="patron" />
+                  </div>
+                  <div class="card-content">
+                    <p class="name">Lakshay Nanda</p>
+                    <!-- <br />
+                    <p>Executive Director</p> -->
+                  </div>
                 </div>
-                <div class="card-content">
-                  <p class="name">Indresh Arora</p>
-                  <!-- <br /> -->
-                  <!-- <p>Vice President</p> -->
-                </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="./img/team/student/arora.JPG" alt="patron" />
               </div>
-              <div class="card">
-                <div class="card-image">
-                  <img src="./img/team/student/lakshay.jpg" alt="patron" />
-                </div>
-                <div class="card-content">
-                  <p class="name">Lakshay Nanda</p>
-                  <!-- <br />
-                  <p>Executive Director</p> -->
-                </div>
+              <div class="card-content">
+                <p class="name">Indresh Arora</p>
+                <!-- <br /> -->
+                <!-- <p>Vice President</p> -->
               </div>
             </div>
+          </div>
             <!--  -->
             <div class="center-align team-heading-2">
               <br>
@@ -351,7 +390,7 @@
               </div>
               <div class="card">
                   <div class="card-image">
-                    <img src="./img/team/student/pratap.jpg" alt="patron" />
+                    <img src="./img/team/student/pratap.JPG" alt="patron" />
                   </div>
                   <div class="card-content">
                     <p class="name">Reddy Pratap Kumar</p>
@@ -375,6 +414,8 @@
                 </div>
                 
             </div>
+            <!--  -->
+            
             <!--  -->
             <div class="center-align team-heading-2">
                 <h5>
@@ -566,5 +607,8 @@
     <!-- scripts -->
     <script src="js/particles.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/main.js"></script>    
+    <script src="js/materialize.min.js"></script>
+
   </body>
 </html>
