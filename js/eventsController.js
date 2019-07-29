@@ -3,7 +3,9 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
   $scope.working = true;
   $scope.working1 = false;
   var count = 0;
-  const URL = "https://gravitas19.herokuapp.com/events";
+  // const URL = "https://gravitas19.herokuapp.com/events";
+
+  const URL = "https://smart-tiger-53.localtunnel.me";
   $http.get(URL).then(response => {
     // console.log("EVENTS ", response.data);
     $scope.events = response.data;
