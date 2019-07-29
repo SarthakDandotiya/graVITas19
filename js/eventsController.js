@@ -9,6 +9,78 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
   $http.get(URL).then(response => {
     // console.log("EVENTS ", response.data);
     $scope.events = response.data;
+    // $scope.events = [
+    //   {
+    //     venue: {
+    //       requested: {
+    //         building: "SJT"
+    //       }
+    //     },
+    //     organization: ["Demorg"],
+    //     visible: true,
+    //     _id: "5d3f209bc222ca5f0da88d83",
+    //     name: "Demor",
+    //     category: "non-technical",
+    //     duration: "3",
+    //     date: "2019-07-29T18:30:00.000Z",
+    //     dateEnd: "2019-07-30T18:30:00.000Z",
+    //     fees: "345",
+    //     timing: "1970-01-01T06:30:00.000Z"
+    //   },
+    //   {
+    //     venue: {
+    //       requested: {
+    //         building: "sjt",
+    //         requirement: "chairs"
+    //       }
+    //     },
+    //     organization: ["gggg"],
+    //     visible: true,
+    //     _id: "5d3f23ada1e55f60f1e97a50",
+    //     name: "ggg",
+    //     category: "non-technical",
+    //     duration: "2",
+    //     date: "2019-07-24T18:30:00.000Z",
+    //     dateEnd: "2019-09-18T18:30:00.000Z",
+    //     fees: "345",
+    //     timing: "1970-01-01T06:39:00.000Z"
+    //   }
+    // ];
+
+    // console.log("EVENTS ", $scope.events);
+    var months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+    for (i = 0; i < $scope.events.length; i++) {
+      // console.log($scope.events[i].date);
+      d = new Date($scope.events[i].date);
+      date = d.getDate().toString();
+      month = d.getMonth();
+      year = d.getFullYear().toString();
+      str = "";
+      str = str + date.toString() + "th " + months[month];
+
+      d = new Date($scope.events[i].dateEnd);
+      date = d.getDate().toString();
+
+      month = d.getMonth();
+      year = d.getFullYear().toString();
+
+      str = str + " to " + date.toString() + "th " + months[month];
+
+      $scope.events[i].date = str;
+    }
 
     $scope.category;
     $("#mix-wrapper").mixItUp({
