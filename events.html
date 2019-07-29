@@ -252,13 +252,17 @@
                     </div>
                     <div class="flip-box-back">
                       &nbsp;&nbsp;
-                      {{ event.category.toUpperCase() }}
+                      <span>{{ event.category.toUpperCase() }}</span>
                       <br />
-                      &nbsp;&nbsp;{{
-                        toTitleCase(event.duration).split(" ")[0]
-                      }}
-                      Hours<br />
-                      &nbsp;&nbsp;{{ event.date }}
+                      &nbsp;&nbsp;&nbsp;<span
+                        >{{
+                          toTitleCase(event.duration).split(" ")[0]
+                        }}
+                        Hours</span
+                      >
+                      <br />
+                      &nbsp;&nbsp;
+                      <span ng-if="event.date!=''">{{ event.date }}</span>
                     </div>
                   </div>
                 </div>

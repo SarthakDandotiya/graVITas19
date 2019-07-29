@@ -64,21 +64,26 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
     ];
     for (i = 0; i < $scope.events.length; i++) {
       // console.log($scope.events[i].date);
-      d = new Date($scope.events[i].date);
-      date = d.getDate().toString();
-      month = d.getMonth();
-      year = d.getFullYear().toString();
       str = "";
-      str = str + date.toString() + "th " + months[month];
 
-      d = new Date($scope.events[i].dateEnd);
-      date = d.getDate().toString();
+      d = new Date($scope.events[i].date);
 
-      month = d.getMonth();
-      year = d.getFullYear().toString();
+      if (d != "Invalid Date") {
+        date = d.getDate().toString();
+        month = d.getMonth();
+        year = d.getFullYear().toString();
+        str = str + date.toString() + "th " + months[month] + ", " + year;
+      }
 
-      str = str + " to " + date.toString() + "th " + months[month];
+      // d = new Date($scope.events[i].dateEnd);
+      // if (d) {
+      //   date = d.getDate().toString();
 
+      //   month = d.getMonth();
+      //   year = d.getFullYear().toString();
+
+      //   str = str + " to " + date.toString() + "th " + months[month];
+      // }
       $scope.events[i].date = str;
     }
 
@@ -151,6 +156,69 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
       $http.get(URL2).then(response => {
         // console.log("EVENT Individual", response.data);
         $scope.individual = response.data;
+        //-----------------
+        //timing and date fixing
+        t2 = "Invalid Date";
+        console.log($scope.individual.timing);
+        t1 = new Date($scope.individual.timing);
+
+        if ($scope.individual.timingEnd)
+          t2 = new Date($scope.individual.timingEnd);
+        str1 = "";
+        if (t1 != "Invalid Date") {
+          h = t1.getHours();
+          m = t1.getMinutes();
+          if (h < 10) h = "0" + h;
+          if (m < 10) m = "0" + m;
+          str1 = str1 + h + ":" + m;
+
+          if (t2 != "Invalid Date") {
+            h = t2.getHours();
+            m = t2.getMinutes();
+            if (h < 10) h = "0" + h;
+            if (m < 10) m = "0" + m;
+            str1 = str1 + " to " + h + ":" + m;
+          }
+          $scope.individual.timing = str1;
+        }
+
+        //---------------------------
+        var months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ];
+        d = new Date($scope.individual.date);
+        if (d != "Invalid Date") {
+          str = "";
+          if (d != "Invalid Date") {
+            date = d.getDate().toString();
+            month = d.getMonth();
+            year = d.getFullYear().toString();
+            str = str + date.toString() + "th " + months[month];
+          }
+
+          d = new Date($scope.individual.dateEnd);
+          if (d != "Invalid Date") {
+            date = d.getDate().toString();
+
+            month = d.getMonth();
+            year = d.getFullYear().toString();
+            str = str + " to " + date.toString() + "th " + months[month];
+          }
+          $scope.individual.date = str;
+        }
+
+        //-----------------
         $scope.working1 = true;
         if ($scope.individual._id == "5cd2aef78271f70017dbc3a7") {
           $("." + id + " .content").html(
@@ -165,11 +233,15 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
           $scope.individual.description
         );
         $("." + id + " .content .event_date").html(
-          "<b>Date:</b> " + $scope.individual.date + ",2019 "
+          "<b>Date:</b> " + $scope.individual.date
         );
         $("." + id + " .content .event_time").html(
           "<b>Timing:</b> " + $scope.individual.timing
         );
+        // if ($scope.timingEnd)
+        //   $("." + id + " .content .event_time_end").html(
+        //     "<b>End Time:</b> " + $scope.individual.timingEnd
+        //   );
         $("." + id + " .content .event_venue").html(
           "<b>Venue:</b> " + $scope.individual.venue.requested.building
         );
@@ -183,7 +255,13 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         $("." + id + " .content .event_fees").html(
           "<b>Registration Fee: </b>&#8377; " + $scope.individual.fees
         );
-        if ($scope.individual.prize != undefined)
+        if (
+          $scope.individual.prize != undefined &&
+          $scope.individual.prize != "(Will be Updated)" &&
+          $scope.individual.prize != "(Will be updated)" &&
+          $scope.individual.prize != "" &&
+          $scope.individual.prize != " "
+        )
           $("." + id + " .content .event_prize").html(
             "<b>Prize Money: </b>&#8377; " + $scope.individual.prize
           );

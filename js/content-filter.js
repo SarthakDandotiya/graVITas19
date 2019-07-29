@@ -70,7 +70,8 @@ $(function() {
             .trim() == "Non-Technical"
         )
           // $("button.megathon").click();
-          $("button.all").click();
+          // $("button.all").click();
+          $("#mix-wrapper").mixItUp("filter", ".all");
         // if (
         //   $(".sel")
         //     .text()
@@ -89,6 +90,7 @@ $(function() {
             .trim() == "All"
         )
           // $("button.megathon").click();
+
           $("button.non-technical").click();
         // if (
         //   $(".sel")
@@ -117,9 +119,11 @@ $(function() {
         if (
           $(".sel")
             .text()
-            .trim() == "Premium"
+            .trim() == "Premier"
         )
           $("button.all").click();
+      // console.log("hit");
+      // $("#mix-wrapper").mixItUp("filter", ".all");
     }
   });
 });
