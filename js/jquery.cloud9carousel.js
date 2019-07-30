@@ -321,7 +321,7 @@
           if (
             $(".sel")
               .text()
-              .trim() == "Premium"
+              .trim() == "Premier"
           )
             $("button.workshops").click();
           if (
@@ -341,12 +341,12 @@
               .text()
               .trim() == "Non-Technical"
           )
-            $("button.megathon").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Megathon"
-          )
+            //   $("button.megathon").click();
+            // if (
+            //   $(".sel")
+            //     .text()
+            //     .trim() == "Megathon"
+            // )
             $("button.all").click();
         } else {
           if (
@@ -354,12 +354,12 @@
               .text()
               .trim() == "All"
           )
-            $("button.megathon").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Megathon"
-          )
+            //   $("button.megathon").click();
+            // if (
+            //   $(".sel")
+            //     .text()
+            //     .trim() == "Megathon"
+            // )
             $("button.non-technical").click();
           if (
             $(".sel")
@@ -382,7 +382,7 @@
           if (
             $(".sel")
               .text()
-              .trim() == "Premium"
+              .trim() == "Premier"
           )
             $("button.all").click();
         }
@@ -439,7 +439,7 @@
           if (
             $(".sel")
               .text()
-              .trim() == "Premium"
+              .trim() == "Premier"
           )
             $("button.workshops").click();
           if (
@@ -459,12 +459,12 @@
               .text()
               .trim() == "Non-Technical"
           )
-            $("button.megathon").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Megathon"
-          )
+            //   $("button.megathon").click();
+            // if (
+            //   $(".sel")
+            //     .text()
+            //     .trim() == "Megathon"
+            // )
             $("button.all").click();
           return false;
         });
@@ -478,12 +478,12 @@
               .text()
               .trim() == "All"
           )
-            $("button.megathon").click();
-          if (
-            $(".sel")
-              .text()
-              .trim() == "Megathon"
-          )
+            //   $("button.megathon").click();
+            // if (
+            //   $(".sel")
+            //     .text()
+            //     .trim() == "Megathon"
+            // )
             $("button.non-technical").click();
           if (
             $(".sel")
@@ -506,7 +506,7 @@
           if (
             $(".sel")
               .text()
-              .trim() == "Premium"
+              .trim() == "Premier"
           )
             $("button.all").click();
           return false;
