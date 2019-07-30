@@ -252,7 +252,12 @@
                     </div>
                     <div class="flip-box-back">
                       &nbsp;&nbsp;
-                      <span>{{ event.category.toUpperCase() }}</span>
+                      <span ng-if="event.category.toUpperCase()!='PREMIUM'">{{
+                        event.category.toUpperCase()
+                      }}</span>
+                      <span ng-if="event.category.toUpperCase()=='PREMIUM'"
+                        >PREMIER</span
+                      >
                       <br />
                       &nbsp;&nbsp;&nbsp;<span
                         >{{
