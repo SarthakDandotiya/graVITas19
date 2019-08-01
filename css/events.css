@@ -232,6 +232,12 @@ nav,
   user-select: none !important;
   height: 100px;
   background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.card-img img {
+  height: 100px !important;
+  width: 100% !important;
 }
 
 .flip-box-inner {

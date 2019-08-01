@@ -34,7 +34,12 @@
     <!-- <link rel="stylesheet" href="./css/main.css" /> -->
     <link rel="stylesheet" href="./css/events.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
-    <style></style>
+    <style>
+      .card-img {
+        background-size: contain;
+        background-position: center;
+      }
+    </style>
   </head>
 
   <body ng-app="myApp" ng-controller="eventCtrl" class="doodle-back">
@@ -44,7 +49,7 @@
       <!-- NAVIGATION BAR -->
       <nav id="navbar">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo"
+          <a href="index.html" class="brand-logo"
             ><img
               src="./img/gravitas-final-white.png"
               alt="Logo"
@@ -232,18 +237,27 @@
                       <div class="no-pad col l4 s4">
                         <!-- <div
                           class="card-img"
-                          style="background-position:center;background-size:cover ;background: url({{
+                          style="background-position:center;background-size:contain ;background: url({{
                             event.thumbnailUrl
                               ? event.thumbnailUrl
                               : 'img/template.jpg'
                           }});"
                         ></div> -->
-                        <div
+                        <!-- <div
                           class="card-img"
                           style="background-position:center;background-size:cover ;background: url({{
                             event.thumbnailUrl
                           }});"
-                        ></div>
+                        ></div> -->
+                        <div class="card-img">
+                          <img
+                            src="{{
+                              event.thumbnailUrl
+                                ? event.thumbnailUrl
+                                : 'img/template.jpg'
+                            }}"
+                          />
+                        </div>
                       </div>
                       <div class="col l8 s8">
                         <div class="title">
