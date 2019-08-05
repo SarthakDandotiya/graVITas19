@@ -213,7 +213,8 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
 
             month = d.getMonth();
             year = d.getFullYear().toString();
-            str = str + " to " + date.toString() + "th " + months[month];
+            if (months[month] != "January")
+              str = str + " to " + date.toString() + "th " + months[month];
           }
           $scope.individual.date = str;
         }

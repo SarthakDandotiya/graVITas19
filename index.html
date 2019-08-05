@@ -32,6 +32,17 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
+    <style>
+      .dropdown-content {
+        background: #555555 !important;
+      }
+      .dropdown-content a {
+        color: white !important;
+      }
+      .dropdown-content a:hover {
+        background: #333 !important;
+      }
+    </style>
   </head>
   <body>
     <div class="container-fluid">
@@ -54,8 +65,32 @@
             <li><a class="scroll" href="#tns">TEAM</a></li>
             <li><a class="scroll" href="#tns">SPONSORS</a></li>
             <li>
-              <a href="http://info.vit.ac.in/INEST/conference/index.html"
+              <a class="dropdown-trigger " data-target="dropdown1"
                 >CONFERENCE</a
+              >
+            </li>
+          </ul>
+          <ul id="dropdown1" class="dropdown-content">
+            <li>
+              <a href="http://info.vit.ac.in/INEST/conference/index.html"
+                >VISIT</a
+              >
+            </li>
+            <li>
+              <a href="http://info.vit.ac.in/gravitas2019/gravitas_login.asp"
+                >REGISTER</a
+              >
+            </li>
+          </ul>
+          <ul id="dropdown2" class="dropdown-content">
+            <li>
+              <a href="http://info.vit.ac.in/INEST/conference/index.html"
+                >VISIT</a
+              >
+            </li>
+            <li>
+              <a href="http://info.vit.ac.in/gravitas2019/gravitas_login.asp"
+                >REGISTER</a
               >
             </li>
           </ul>
@@ -63,15 +98,13 @@
       </nav>
 
       <ul class="sidenav" id="mobile-demo">
-        <li><a class="scroll" href="#landing">HOME</a></li>
-        <li><a class="scroll" href="#about">ABOUT</a></li>
-        <li><a class="scroll" href="#events">EVENTS</a></li>
-        <li><a class="scroll" href="#tns">TEAM</a></li>
-        <li><a class="scroll" href="#tns">SPONSORS</a></li>
+        <li><a class="scroll x" href="#landing">HOME</a></li>
+        <li><a class="scroll x" href="#about">ABOUT</a></li>
+        <li><a class="scroll x" href="#events">EVENTS</a></li>
+        <li><a class="scroll x" href="#tns">TEAM</a></li>
+        <li><a class="scroll x" href="#tns">SPONSORS</a></li>
         <li>
-          <a href="http://info.vit.ac.in/INEST/conference/index.html"
-            >CONFERENCE</a
-          >
+          <a class="dropdown-trigger2" data-target="dropdown2">CONFERENCE</a>
         </li>
       </ul>
 
