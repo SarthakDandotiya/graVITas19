@@ -231,9 +231,9 @@ nav,
 .card-img {
   user-select: none !important;
   height: 100px;
-  background-size: cover !important;
+  /* background-size: cover !important;
   background-position: center !important;
-  background-repeat: no-repeat !important;
+  background-repeat: no-repeat !important; */
 }
 .card-img img {
   height: 100px !important;
