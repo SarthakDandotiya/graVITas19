@@ -120,7 +120,7 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
       }
     });
 
-    console.log(localStorage.getItem("storageName"));
+    // console.log(localStorage.getItem("storageName"));
     if (localStorage.getItem("storageName") == "all") $("button.all").click();
     else if (localStorage.getItem("storageName") == "premium")
       $("button.premium").click();
@@ -159,7 +159,7 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
         //-----------------
         //timing and date fixing
         t2 = "Invalid Date";
-        console.log($scope.individual.timing);
+        // console.log($scope.individual.timing);
         t1 = new Date($scope.individual.timing);
 
         if ($scope.individual.timingEnd)
