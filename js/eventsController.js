@@ -9,6 +9,28 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
   $http.get(URL).then(response => {
     // console.log("EVENTS ", response.data);
     $scope.events = response.data;
+    var count = 0;
+    $scope.events.forEach(event => {
+      // console.log(event.thumbnailUrl);
+      if (event.thumbnailUrl) {
+        var k = 0;
+        var str = event.thumbnailUrl;
+        for (var i = str.length - 1; i > 0; i--) {
+          if (event.thumbnailUrl[i] == "/") {
+            k = i;
+            count++;
+            break;
+          }
+        }
+        var str = event.thumbnailUrl.substring(k, event.thumbnailUrl.length);
+
+        str = "img/thumbnails" + str;
+        event.thumbnailUrl = str;
+        // console.log(str);
+      }
+    });
+    // console.log($scope.events);
+    // console.log(count);
     // $scope.events = [
     //   {
     //     venue: {
