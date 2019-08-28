@@ -38,6 +38,13 @@
     </style>
   </head>
   <body>
+      <script src="./js/jquery.js"></script>
+      <div id="cover"><img src="./img/grav-pre.gif" alt="gif" width="50%"></div>
+      <script>
+          $(window).on("load", function() {
+              $("#cover").fadeOut(200);
+            });
+      </script>
     <div class="container-fluid">
       <header class="row">
         <div id="particles-js">
@@ -137,7 +144,7 @@
     <!-- scripts -->
     <script src="js/particles.js"></script>
     <script src="js/index.js"></script>
-    <script src="./js/jquery.js"></script>
+    <!-- <script src="./js/jquery.js"></script> -->
     <script src="./js/materialize.min.js"></script>
     <script src="./js/main.js"></script>
   </body>

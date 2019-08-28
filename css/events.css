@@ -57,6 +57,18 @@ p {
   }
 }
 
+#cover {
+	background: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 100;
+	height: 100%;
+	width: 100%;
+	z-index: 999999;
+}
+
 section {
   padding: 5em 0;
   /* padding-top: 5em; */
