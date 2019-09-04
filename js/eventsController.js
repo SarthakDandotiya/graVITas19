@@ -243,15 +243,15 @@ app.controller("eventCtrl", function($scope, $http, $sce) {
 
         //-----------------
         $scope.working1 = true;
-        // if ($scope.individual._id == "5cd2aef78271f70017dbc3a7") {
-        //   $("." + id + " .content").html(
-        //     "<div class='event_desc'></div><br /> <div class='row no-pad'><div class='col l5 no-pad'><div class='event_date'></div><div class='event_time'></div> <div class='event_fees'></div></div><div class='no-pad col l7'><div class='event_prize'></div><div class='event_venue'></div><div class='event_coor'></div></div></div><br><div><a href='http://vithack.com'><button class='btn right'>Register</button></a></div><div>&nbsp;</div><div>&nbsp;</div>"
-        //   );
-        // } else {
+        if ($scope.individual._id == "5d6f599c994b4c00174a45e4") {
+          $("." + id + " .content").html(
+            "<div class='event_desc'></div><br /> <div class='row no-pad'><div class='col l5 no-pad'><div class='event_date'></div><div class='event_time'></div> <div class='event_fees'></div></div><div class='no-pad col l7'><div class='event_prize'></div><div class='event_venue'></div><div class='event_coor'></div></div></div><br><div><a href='http://socialtransformers.tech'><button class='btn right'>Register</button></a></div><div>&nbsp;</div><div>&nbsp;</div>"
+          );
+        } else {
         $("." + id + " .content").html(
           "<div class='event_desc'></div><br /> <div class='row no-pad'><div class='col l5 no-pad'><div class='event_date'></div><div class='event_time'></div> <div class='event_fees'></div></div><div class='no-pad col l7'><div class='event_prize'></div><div class='event_venue'></div><div class='event_coor'></div><div class='download_url'></div></div></div><br><div><a href='http://info.vit.ac.in/gravitas2019/gravitas_login.asp'><button class='btn right'>Register</button></a></div><div>&nbsp;</div><div>&nbsp;</div>"
         );
-        // }
+        }
         $("." + id + " .content .event_desc").html(
           $scope.individual.description
         );
